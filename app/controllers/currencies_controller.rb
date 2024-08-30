@@ -1,7 +1,7 @@
 class CurrenciesController < ApplicationController
   layout 'admin'
-  before_filter :require_admin
-  before_filter :find_currency, :only => [:edit, :update, :destroy]
+  before_action :require_admin
+  before_action :find_currency, :only => [:edit, :update, :destroy]
 
   def index
     @currencies = Currency.all || [Currency.default]

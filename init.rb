@@ -18,6 +18,6 @@ end
 
 if Rails.version > '6.0'
   ActiveSupport::Reloader.to_prepare do
-    require 'currency_module/hooks'
+    require File.expand_path('currency_module/hooks', __FILE__)
   end
 end
