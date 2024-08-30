@@ -1,4 +1,4 @@
-class AddCurrencyTypeToCurrencies < ActiveRecord::Migration
+class AddCurrencyTypeToCurrencies < ActiveRecord::Migration[6.1]
   def self.up
     add_column :currencies, :currency_type, :string, :default => 'dinamic', :null => false
   end

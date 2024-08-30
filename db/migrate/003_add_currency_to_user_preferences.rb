@@ -1,4 +1,4 @@
-class AddCurrencyToUserPreferences < ActiveRecord::Migration
+class AddCurrencyToUserPreferences < ActiveRecord::Migration[6.1]
   def self.up
     add_column :user_preferences, :currency, :integer, :null => true
   end
